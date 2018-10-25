@@ -1,0 +1,1 @@
+function send(e,t,a){e.preventDefault(),$.ajaxSetup({headers:{"X-CSRF-TOKEN":$('meta[name="csrf-token"]').attr("content")}}),$.ajax({type:"get",dataType:"json",url:t,data:{id:a},success:function(e){e.success&&$(".modal").empty().append(e.html).modal()}})}
